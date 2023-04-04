@@ -1,0 +1,40 @@
+html{
+  scroll-snap-type: y mandatory;
+}
+
+.App{
+  background-color: black;
+  height: 100vh;
+  display: grid;
+  place-items: center; /* Colocar os itens no centro */
+}
+
+.render_Videos{
+  height: 100vh;
+  max-height: 800px; /* Necessário para não ultrapassar o tamanho da tela */
+  width: 80%;
+  max-width: 500px; /* Necessário por causa do width em % e para não ultrapassar o tamanho da tela*/
+  border: 1px solid black;
+  border-radius: 15px;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+
+}
+
+/* Esconder scrollbar no chrome, safari e opera */
+.render_Videos::-webkit-scrollbar{
+  display: none;
+}
+/* Esconder scrollbar no internet explore, edge e firefox */
+.render_Videos{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media only screen and (max-width: 440px){
+  .render_Videos{
+    width: 100%;
+    height: 100vh;
+  }
+}

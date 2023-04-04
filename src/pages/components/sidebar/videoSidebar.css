@@ -1,0 +1,17 @@
+.videosidebar{
+    position: absolute; /* para se mover de forma absoluta do app */
+    top: 50%;
+    right: 10px;
+    color: white;
+}
+
+.videosidebar_options{
+    padding: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 440px){
+    .videosidebar{
+        top: 46%;
+    }
+}

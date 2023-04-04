@@ -1,0 +1,69 @@
+.videofooter {
+  position: relative;
+  bottom: 20%;
+  color: white;
+  margin-left: 30px;
+}
+
+.videofooter_text h3 {
+  padding-bottom: 20px;
+}
+
+.videofooter_text p {
+  padding-bottom: 20px;
+}
+
+.videofooter_music {
+  display: flex;
+}
+
+.videofooter_icon {
+  border: 1px solid green;
+}
+
+.videofooter_musictext {
+  border: 1px solid red;
+  width: 80%;
+  overflow-x: hidden; /* esconder texto fora do container */
+  /*animation: movetheText 2s infinite linear;*/
+}
+
+.videofooter_musictext p{
+    animation: movetheText 3s infinite linear; /* tive que atribuir a animação somente no P, caso contrario todo o objeto iria se mover */
+}
+
+.videofooter_disc {
+  animation: spintheDisc 2s infinite linear;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  height: 50px;
+  filter: invert(1); /* inverter a cor de um obj preto para branco */
+}
+
+@keyframes spintheDisc {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movetheText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (max-width: 440px){
+  .videofooter{
+    bottom: 22%;
+  }
+  .videofooter_musictext{
+    width: 78%;
+  }
+}
